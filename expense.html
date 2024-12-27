@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>12-Month Expense Tracker</title>
+
+     <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+  <div class="container" id="set-limit-section">
+    <h1>Set Monthly Limit</h1>
+    <input type="number" id="limit-input" placeholder="Enter your monthly limit (₹)" required autocomplete="off"/>
+    <button id="set-limit-button">Set Limit</button>
+  </div>
+
+  <div class="container hidden" id="calendar-section">
+    <h1>2025 Calendar</h1>
+    <input type="text" id="admin-code" placeholder="Enter Admin Code" required autocomplete="off"/>
+    <button id="admin-access-button"> Dashboard</button>
+    <div class="calendar-container" id="calendar-container"></div>
+  </div>
+
+  <div class="popup" id="expense-popup">
+    <h3>Add Expense</h3>
+    <input type="text" id="expense-reason" placeholder="Reason for expense" required autocomplete="off" />
+    <input type="number" id="expense-amount" placeholder="Expense amount (₹)" required autocomplete="off"/>
+    <button id="submit-expense">Add Expense</button>
+    <button id="close-popup">Close</button>
+  </div>
+
+  <div class="container hidden" id="admin-dashboard">
+    <h1>Dashboard</h1>
+    <div id="admin-table-container"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

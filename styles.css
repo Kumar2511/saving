@@ -1,0 +1,179 @@
+ /* Same styling as before */
+ .month {
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to bottom right, #32696b, #ffb3d9);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  transition: transform 0.3s ease-in-out, opacity 0.5s ease;
+}
+
+h1 {
+  color: #ffdd59;
+  transition: opacity 0.5s ease-in-out;
+}
+
+button {
+  background-color: #ffdd59;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s, box-shadow 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background-color: #ffd700;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+input {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+input:focus {
+  transform: scale(1.05);
+  border-color: #ffdd59;
+}
+
+.hidden {
+  display: none;
+}
+
+.calendar-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-gap: 20px;
+  width: 100%;
+  padding: 20px;
+  justify-items: center;
+}
+
+.month {
+  background: #ffb3d9;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.month:hover {
+  transform: scale(1.1);
+  background-color: #ff80b3;
+}
+
+.month h3 {
+  color: #ffdd59;
+  font-size: 24px;
+}
+
+.month .days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 7 days per row */
+  grid-gap: 5px;
+  margin-top: 10px;
+}
+
+.month .days button {
+  background-color: #ffdd59;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.month .days button:hover {
+  transform: scale(1.1);
+  background-color: #ffd700;
+}
+
+.month .total {
+  margin-top: 10px;
+  color: white;
+  font-size: 16px;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  border-radius: 10px;
+  color: white;
+  width: 80%;
+  max-width: 400px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s ease-in-out, transform 0.3s ease;
+}
+
+.popup.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #fff;
+}
+
+th {
+  background-color: #ffdd59;
+}
+
+.admin-table {
+  margin: 10px;
+  padding: 20px;
+  background: rgba(207, 2, 2, 0.1);
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
